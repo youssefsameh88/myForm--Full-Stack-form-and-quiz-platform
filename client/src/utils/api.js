@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://myform-backend-yz0c.onrender.com';
+export const BASE_URL = '';
 
 export async function fetchApi(endpoint, options = {}) {
   const url = `${BASE_URL}${endpoint}`;
