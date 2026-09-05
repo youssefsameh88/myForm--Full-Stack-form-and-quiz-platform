@@ -1,13 +1,13 @@
-import pg from "pg"
+import pg from "pg";
+import "dotenv/config";
 
+const db = new pg.Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
 
-const config = {
-    user: "postgres",
-    host: "localhost",
-    database: "myform",
-    password: "youssef123",
-    port: 5432
-};
-const db = new pg.Client(config);
 db.connect();
+
 export default db;
