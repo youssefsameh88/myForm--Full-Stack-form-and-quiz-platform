@@ -10,7 +10,7 @@ import choiceRoutes from "./routes/choiceRoutes.js";
 import responseRoutes from "./routes/responseRoutes.js";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors({
     origin: "http://localhost:5173",
